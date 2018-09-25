@@ -7,12 +7,25 @@
 	},
 	"item": [
 		{
-			"_postman_id": "5317bfdc-8798-4725-bbfa-cebf5ac4dbb7",
 			"name": "State",
 			"item": [
 				{
-					"_postman_id": "0ac17b09-1ca7-4cc8-8e94-2ef9c0192da1",
 					"name": "State",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7c3fcb25-aea2-4650-a748-d24306e0c220",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -29,12 +42,25 @@
 			]
 		},
 		{
-			"_postman_id": "618df314-5d96-4d91-ac69-e7b8e6a975ab",
 			"name": "Source",
 			"item": [
 				{
-					"_postman_id": "0a20553c-4dc1-4472-b61b-276d1ad2813a",
 					"name": "Power on",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "db776a68-9403-4426-9081-8565d0fe5eb9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -52,8 +78,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "13ea4571-ef90-41b0-bdd4-7308e7e5da95",
 					"name": "Power off",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4ad8a8c-cf98-4916-8e86-3565a35ccb72",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -71,8 +111,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "6b65bc1b-9a4b-46a4-8a80-9ee39914c68d",
 					"name": "Set voltage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "baaaf96f-66c5-4e36-8261-bbe37b4dc6de",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -90,8 +144,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "dd807341-5144-45e4-8c32-fb078a32aaec",
 					"name": "Set current",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "17bd98f2-74ad-41cb-a641-74371d4f633e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -109,8 +177,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "80894867-bd08-4923-afaf-eac0d0b36329",
 					"name": "Get voltage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b7e7ea65-093d-4ba6-be07-6cc47e2463d0",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -128,8 +210,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "bdf27c48-d419-4fe0-9364-b3f807cd3e02",
 					"name": "Get current",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d1bc3d3-cf1d-4163-964a-92710b9eb5b0",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -149,12 +245,25 @@
 			]
 		},
 		{
-			"_postman_id": "68155d3d-ecdb-4be2-aeaf-2206ee932711",
 			"name": "Shutter",
 			"item": [
 				{
-					"_postman_id": "82a4f539-1c50-4081-978a-679dd47936df",
 					"name": "Open shutter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a386a284-d034-4070-a25e-92085a691039",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -173,8 +282,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "b8508949-06f7-41a3-8124-3f50600d338d",
 					"name": "Close shutter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "27882080-4a4a-4a39-a859-a18b3bafa98f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -193,8 +316,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "b514fbf1-e115-459b-b040-cf283d6fd21f",
 					"name": "Shutter state",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "22e72070-b41d-42ec-9553-479cc0e0364d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -214,12 +351,25 @@
 			]
 		},
 		{
-			"_postman_id": "cb7107c1-80b7-4c8f-a450-b5b4577bf9ec",
 			"name": "Motor",
 			"item": [
 				{
-					"_postman_id": "8a9db516-1a11-4ef6-8a41-643a66309873",
 					"name": "Set horizontal position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "97c8a7e9-99fb-4e6b-b956-be1a184497c4",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -237,8 +387,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "090733c9-00f3-4b6a-963f-a3d7661d4db1",
 					"name": "Set vertical position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c12a8a70-4a12-44d1-8bdb-bdcb18ead392",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -256,8 +420,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "22837c62-aee6-4316-a296-1cd32a5fa7d8",
 					"name": "Set angle position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c9955382-2570-48af-a06f-b44636d58455",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -275,8 +453,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "cbdce521-1b4d-4e98-8d60-e85e24da6bd1",
 					"name": "Get horizontal position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05e818ba-1f06-4b57-9e30-b6fd63d18053",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -294,8 +486,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "42e167b3-74ca-409a-a616-764af00008f2",
 					"name": "Get vertical position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ae9fc0ba-7270-4582-8a5e-e961b4ec1bf2",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -313,8 +519,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "1ca5e92d-f462-4cd7-95a6-4e0d5f503c72",
 					"name": "Get angle position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4adfbf6f-9057-4516-9edc-67a438319106",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -332,8 +552,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "b4024138-08fa-4170-b8a2-b125f3c16901",
 					"name": "Move away",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dbf04eeb-4e6a-441b-8321-c602fd3c3aaf",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -351,8 +585,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "5c008e14-7995-4dd9-ad39-4234de951797",
 					"name": "Move back",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "47a14bb8-dd85-4514-8fd2-896dd49a511a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -370,8 +618,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "286d58cf-c7d8-43f0-bfb4-b85248296cbd",
 					"name": "Reset angle position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "decd030a-3e5a-4542-89a2-25f4d288c2ff",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -391,12 +653,25 @@
 			]
 		},
 		{
-			"_postman_id": "619318e2-c0f0-4934-8956-0e9ea0699eb8",
 			"name": "Detector",
 			"item": [
 				{
-					"_postman_id": "89d28d3d-f272-44e9-a3f4-a66fe497ca29",
 					"name": "Get frame",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d1370fd5-a44d-4968-b7f3-6b819b220173",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -414,8 +689,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "13fb8f2f-cb99-44be-ae2b-0f0d9bda4aee",
 					"name": "Get frame with closed shutter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ca6ce005-4d2a-4927-aecb-b4a00a550ff8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -433,8 +722,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "e23abb75-0bd3-4c2a-9f44-20218bddbe70",
 					"name": "Chip temp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b2a7d622-102c-4de2-b99b-e116ad9a19a6",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -452,8 +755,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "88f6a00a-1212-4fcf-9ad5-bd21c4b7dfaa",
 					"name": "Hous temp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3975fecd-9fa3-401c-b7f1-447a1d0f48d8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -473,12 +790,25 @@
 			]
 		},
 		{
-			"_postman_id": "c0872d75-7647-43d0-b90f-2bae061fce92",
 			"name": "Experiment",
 			"item": [
 				{
-					"_postman_id": "65f312dc-542f-48bc-ad66-6e99b8415a3d",
 					"name": "Start",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a9177955-ee99-460e-a7ab-936143cb36d7",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -496,8 +826,22 @@
 					"response": []
 				},
 				{
-					"_postman_id": "4034e316-125e-4d7d-b384-238da7b1ac4c",
 					"name": "Stop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "047261c9-cda8-4538-bca9-86e46a0d4b5b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
