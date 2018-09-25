@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "25425a13-5e33-4ad6-bc3d-a2a55f029e22",
+		"name": "RBTM Experiment",
+		"description": "RBTM Experiment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "5317bfdc-8798-4725-bbfa-cebf5ac4dbb7",
+			"name": "State",
+			"item": [
+				{
+					"_postman_id": "0ac17b09-1ca7-4cc8-8e94-2ef9c0192da1",
+					"name": "State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{stateUrl}}",
+							"host": [
+								"{{stateUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "618df314-5d96-4d91-ac69-e7b8e6a975ab",
+			"name": "Source",
+			"item": [
+				{
+					"_postman_id": "0a20553c-4dc1-4472-b61b-276d1ad2813a",
+					"name": "Power on",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/power-on",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"power-on"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "13ea4571-ef90-41b0-bdd4-7308e7e5da95",
+					"name": "Power off",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/power-off",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"power-off"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "6b65bc1b-9a4b-46a4-8a80-9ee39914c68d",
+					"name": "Set voltage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/set-voltage",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"set-voltage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "dd807341-5144-45e4-8c32-fb078a32aaec",
+					"name": "Set current",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/set-current",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"set-current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "80894867-bd08-4923-afaf-eac0d0b36329",
+					"name": "Get voltage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/get-voltage",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"get-voltage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "bdf27c48-d419-4fe0-9364-b3f807cd3e02",
+					"name": "Get current",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{sourceUrl}}/get-current",
+							"host": [
+								"{{sourceUrl}}"
+							],
+							"path": [
+								"get-current"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "68155d3d-ecdb-4be2-aeaf-2206ee932711",
+			"name": "Shutter",
+			"item": [
+				{
+					"_postman_id": "82a4f539-1c50-4081-978a-679dd47936df",
+					"name": "Open shutter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{shutterUrl}}/open/1",
+							"host": [
+								"{{shutterUrl}}"
+							],
+							"path": [
+								"open",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "b8508949-06f7-41a3-8124-3f50600d338d",
+					"name": "Close shutter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{shutterUrl}}/close/1",
+							"host": [
+								"{{shutterUrl}}"
+							],
+							"path": [
+								"close",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "b514fbf1-e115-459b-b040-cf283d6fd21f",
+					"name": "Shutter state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{shutterUrl}}/state",
+							"host": [
+								"{{shutterUrl}}"
+							],
+							"path": [
+								"state"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "cb7107c1-80b7-4c8f-a450-b5b4577bf9ec",
+			"name": "Motor",
+			"item": [
+				{
+					"_postman_id": "8a9db516-1a11-4ef6-8a41-643a66309873",
+					"name": "Set horizontal position",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/set-horizontal-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"set-horizontal-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "090733c9-00f3-4b6a-963f-a3d7661d4db1",
+					"name": "Set vertical position",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/set-vertical-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"set-vertical-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "22837c62-aee6-4316-a296-1cd32a5fa7d8",
+					"name": "Set angle position",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/set-angle-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"set-angle-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "cbdce521-1b4d-4e98-8d60-e85e24da6bd1",
+					"name": "Get horizontal position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/get-horizontal-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"get-horizontal-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "42e167b3-74ca-409a-a616-764af00008f2",
+					"name": "Get vertical position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/get-vertical-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"get-vertical-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "1ca5e92d-f462-4cd7-95a6-4e0d5f503c72",
+					"name": "Get angle position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/get-angle-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"get-angle-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "b4024138-08fa-4170-b8a2-b125f3c16901",
+					"name": "Move away",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/move-away",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"move-away"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "5c008e14-7995-4dd9-ad39-4234de951797",
+					"name": "Move back",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/move-back",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"move-back"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "286d58cf-c7d8-43f0-bfb4-b85248296cbd",
+					"name": "Reset angle position",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{motorUrl}}/reset-angle-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"reset-angle-position"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "619318e2-c0f0-4934-8956-0e9ea0699eb8",
+			"name": "Detector",
+			"item": [
+				{
+					"_postman_id": "89d28d3d-f272-44e9-a3f4-a66fe497ca29",
+					"name": "Get frame",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{detectorUtl}}/get-frame",
+							"host": [
+								"{{detectorUtl}}"
+							],
+							"path": [
+								"get-frame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "13fb8f2f-cb99-44be-ae2b-0f0d9bda4aee",
+					"name": "Get frame with closed shutter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{detectorUtl}}/get-frame-with-closed-shutter",
+							"host": [
+								"{{detectorUtl}}"
+							],
+							"path": [
+								"get-frame-with-closed-shutter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "e23abb75-0bd3-4c2a-9f44-20218bddbe70",
+					"name": "Chip temp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{detectorUtl}}/chip_temp",
+							"host": [
+								"{{detectorUtl}}"
+							],
+							"path": [
+								"chip_temp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "88f6a00a-1212-4fcf-9ad5-bd21c4b7dfaa",
+					"name": "Hous temp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{detectorUtl}}/hous_temp",
+							"host": [
+								"{{detectorUtl}}"
+							],
+							"path": [
+								"hous_temp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "c0872d75-7647-43d0-b90f-2bae061fce92",
+			"name": "Experiment",
+			"item": [
+				{
+					"_postman_id": "65f312dc-542f-48bc-ad66-6e99b8415a3d",
+					"name": "Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{experimentUrl}}/start",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "4034e316-125e-4d7d-b384-238da7b1ac4c",
+					"name": "Stop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{experimentUrl}}/stop",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"stop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
