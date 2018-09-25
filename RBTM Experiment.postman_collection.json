@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "25425a13-5e33-4ad6-bc3d-a2a55f029e22",
+		"_postman_id": "284522d2-422f-4ea3-a29c-801561791dac",
 		"name": "RBTM Experiment",
 		"description": "RBTM Experiment",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -29,7 +29,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{stateUrl}}",
 							"host": [
@@ -64,7 +67,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/power-on",
 							"host": [
@@ -97,7 +103,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/power-off",
 							"host": [
@@ -130,7 +139,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/set-voltage",
 							"host": [
@@ -163,7 +175,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/set-current",
 							"host": [
@@ -196,7 +211,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/get-voltage",
 							"host": [
@@ -229,7 +247,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{sourceUrl}}/get-current",
 							"host": [
@@ -267,7 +288,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{shutterUrl}}/open/1",
 							"host": [
@@ -301,7 +325,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{shutterUrl}}/close/1",
 							"host": [
@@ -335,7 +362,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{shutterUrl}}/state",
 							"host": [
@@ -373,7 +403,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/set-horizontal-position",
 							"host": [
@@ -406,7 +439,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/set-vertical-position",
 							"host": [
@@ -439,7 +475,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/set-angle-position",
 							"host": [
@@ -472,7 +511,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/get-horizontal-position",
 							"host": [
@@ -505,7 +547,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/get-vertical-position",
 							"host": [
@@ -538,7 +583,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/get-angle-position",
 							"host": [
@@ -571,7 +619,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/move-away",
 							"host": [
@@ -604,7 +655,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/move-back",
 							"host": [
@@ -637,7 +691,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{motorUrl}}/reset-angle-position",
 							"host": [
@@ -675,7 +732,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{detectorUtl}}/get-frame",
 							"host": [
@@ -708,7 +768,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{detectorUtl}}/get-frame-with-closed-shutter",
 							"host": [
@@ -741,7 +804,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{detectorUtl}}/chip_temp",
 							"host": [
@@ -774,7 +840,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{detectorUtl}}/hous_temp",
 							"host": [
@@ -812,7 +881,10 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{experimentUrl}}/start",
 							"host": [
@@ -845,7 +917,10 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{experimentUrl}}/stop",
 							"host": [
