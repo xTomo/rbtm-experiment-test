@@ -599,7 +599,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "0"
+							"raw": "1"
 						},
 						"url": {
 							"raw": "{{motorUrl}}/set-horizontal-position",
@@ -644,7 +644,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "0"
+							"raw": "1"
 						},
 						"url": {
 							"raw": "{{motorUrl}}/set-vertical-position",
@@ -689,7 +689,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "0"
+							"raw": "1"
 						},
 						"url": {
 							"raw": "{{motorUrl}}/set-angle-position",
