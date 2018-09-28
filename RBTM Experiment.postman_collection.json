@@ -574,9 +574,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7d5230c1-ff3b-4304-82c4-92d749ad6204",
+								"id": "8e3dd535-a2f3-4adb-8266-1eeadf3fd454",
 								"type": "text/javascript",
 								"exec": [
+									"pm.environment.set(\"last request\", \"Set horizontal position\");",
+									"",
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -664,9 +666,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "dd4ee112-313f-4faf-b3c3-96b225f9a570",
+								"id": "f7acb057-c9fb-4108-ac2f-99f81e02d82c",
 								"type": "text/javascript",
 								"exec": [
+									"pm.environment.set(\"last request\", \"Set angle position\");",
+									"",
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -709,7 +713,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2d466505-1309-4197-b0a7-6fa9c91eccd9",
+								"id": "e9f08b1b-e431-48c7-8bd4-9590b7703d09",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
@@ -720,10 +724,33 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData.success).to.be.true;",
+									"    ",
+									"    const lastRequest = pm.environment.get(\"last request\");",
+									"",
+									"    console.log(lastRequest);",
+									"    ",
+									"    if (lastRequest === 'Set horizontal position') {",
+									"",
+									"        pm.expect(jsonData.result).to.equal(1);",
+									"        postman.setNextRequest('Set vertical position');",
+									"        ",
+									"    } else if (lastRequest === 'Move away') {",
+									"        ",
+									"        pm.expect(jsonData.result).to.equal(-4200);",
+									"        postman.setNextRequest('Move back');",
+									"        ",
+									"    } else if (lastRequest === 'Move back') {",
+									"        ",
+									"        pm.expect(jsonData.result).to.equal(1);",
+									"        postman.setNextRequest('Reset angle position');",
+									"",
+									"    } else {",
+									"",
+									"        postman.setNextRequest(null);",
+									"",
+									"    }",
 									"",
 									"});",
-									"",
-									"postman.setNextRequest('Set vertical position');",
 									""
 								]
 							}
@@ -754,7 +781,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6f1ee5e1-cab9-4994-9765-881a2203379f",
+								"id": "31890251-2405-4bfa-b28e-252355816701",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
@@ -765,6 +792,7 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData.success).to.be.true;",
+									"    pm.expect(jsonData.result).to.equal(1);",
 									"",
 									"});",
 									"",
@@ -799,7 +827,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1d91524d-06c0-4f11-8a43-5457ecc5cb1e",
+								"id": "bcd5fada-a2ca-4774-83cc-70e38bb08a0a",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
@@ -810,10 +838,22 @@
 									"    ",
 									"    const jsonData = pm.response.json();",
 									"    pm.expect(jsonData.success).to.be.true;",
+									"    ",
+									"    const lastRequest = pm.environment.get(\"last request\");",
+									"    ",
+									"    if (lastRequest === \"Set angle position\") {",
 									"",
+									"        pm.expect(jsonData.result).to.equal(1);",
+									"        postman.setNextRequest('Move away');",
+									"        ",
+									"    } else if (lastRequest === 'Reset angle position') {",
+									"        ",
+									"        pm.expect(jsonData.result).to.equal(0);",
+									"        postman.setNextRequest('Get frame');",
+									"",
+									"    }",
+									"    ",
 									"});",
-									"",
-									"postman.setNextRequest('Move away');",
 									""
 								]
 							}
@@ -844,12 +884,23 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "decd030a-3e5a-4542-89a2-25f4d288c2ff",
+								"id": "b6c0b226-00ea-436d-86a2-1e32748b266e",
 								"type": "text/javascript",
 								"exec": [
+									"pm.environment.set(\"last request\", \"Reset angle position\");",
+									"",
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get angle position');",
 									""
 								]
 							}
@@ -880,9 +931,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d86c87d1-e09f-4736-aa39-1833c0606c39",
+								"id": "1d1c73f2-1678-43a4-857d-ce0358a1ca69",
 								"type": "text/javascript",
 								"exec": [
+									"pm.environment.set('last request', 'Move away');",
+									"",
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
@@ -894,7 +947,7 @@
 									"",
 									"});",
 									"",
-									"postman.setNextRequest('Move back');",
+									"postman.setNextRequest('Get horizontal position');",
 									""
 								]
 							}
@@ -925,12 +978,23 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "47a14bb8-dd85-4514-8fd2-896dd49a511a",
+								"id": "61cb4deb-a3af-4459-8eb3-8b901f51318e",
 								"type": "text/javascript",
 								"exec": [
+									"pm.environment.set('last request', 'Move back');",
+									"",
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get horizontal position');",
 									""
 								]
 							}
