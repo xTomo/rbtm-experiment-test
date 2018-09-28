@@ -839,6 +839,42 @@
 					"response": []
 				},
 				{
+					"name": "Reset angle position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "decd030a-3e5a-4542-89a2-25f4d288c2ff",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{motorUrl}}/reset-angle-position",
+							"host": [
+								"{{motorUrl}}"
+							],
+							"path": [
+								"reset-angle-position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Move away",
 					"event": [
 						{
@@ -914,42 +950,6 @@
 							],
 							"path": [
 								"move-back"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Reset angle position",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "decd030a-3e5a-4542-89a2-25f4d288c2ff",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{motorUrl}}/reset-angle-position",
-							"host": [
-								"{{motorUrl}}"
-							],
-							"path": [
-								"reset-angle-position"
 							]
 						}
 					},
