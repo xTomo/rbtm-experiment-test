@@ -272,7 +272,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "2.0"
 						},
 						"url": {
 							"raw": "{{sourceUrl}}/set-voltage",
@@ -317,7 +317,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "2.0"
 						},
 						"url": {
 							"raw": "{{sourceUrl}}/set-current",
