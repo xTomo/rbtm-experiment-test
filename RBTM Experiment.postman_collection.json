@@ -7,6 +7,101 @@
 	},
 	"item": [
 		{
+			"name": "Experiment",
+			"item": [
+				{
+					"name": "Start",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5043d335-f443-430f-b0d9-b6b2a37e0949",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Power on');",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{experimentUrl}}/start",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8202979e-1314-458c-a4b8-5ffe38ac0e72",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest(null);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{experimentUrl}}/stop",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"stop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "State",
 			"item": [
 				{
@@ -15,12 +110,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7c3fcb25-aea2-4650-a748-d24306e0c220",
+								"id": "b3c2de2f-7d0b-474f-afd8-e4aef6c14dca",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Open shutter');",
 									""
 								]
 							}
@@ -53,12 +157,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "db776a68-9403-4426-9081-8565d0fe5eb9",
+								"id": "02554539-f68d-45f4-825e-aadd0ceab545",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Set voltage');",
 									""
 								]
 							}
@@ -89,12 +202,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e4ad8a8c-cf98-4916-8e86-3565a35ccb72",
+								"id": "19baeedf-c019-4d4c-9313-8ba8f33de041",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Stop');",
 									""
 								]
 							}
@@ -125,12 +247,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "baaaf96f-66c5-4e36-8261-bbe37b4dc6de",
+								"id": "7c3fcc04-bcd0-4eb1-9b78-af9e0d30b40e",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Set current');",
 									""
 								]
 							}
@@ -161,12 +292,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "17bd98f2-74ad-41cb-a641-74371d4f633e",
+								"id": "5b5466a6-7402-4102-a0be-828af0ba005c",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get voltage');",
 									""
 								]
 							}
@@ -197,12 +337,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b7e7ea65-093d-4ba6-be07-6cc47e2463d0",
+								"id": "11c19744-0a14-45e1-997a-e527cbba94be",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get current');",
 									""
 								]
 							}
@@ -233,12 +382,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1d1bc3d3-cf1d-4163-964a-92710b9eb5b0",
+								"id": "71a0e89a-be76-4bfd-b25c-25d7226cac6a",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('State');",
 									""
 								]
 							}
@@ -274,12 +432,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a386a284-d034-4070-a25e-92085a691039",
+								"id": "d597d7c6-018e-4b47-950d-bdaca61b7a2c",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Shutter state');",
 									""
 								]
 							}
@@ -311,12 +478,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "27882080-4a4a-4a39-a859-a18b3bafa98f",
+								"id": "4d04b09d-7d5a-4b28-b736-54bb9a378f48",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get frame with closed shutter');",
 									""
 								]
 							}
@@ -348,12 +524,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "22e72070-b41d-42ec-9553-479cc0e0364d",
+								"id": "e3d15053-5f02-481d-a753-0b4a82896335",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Set horizontal position');",
 									""
 								]
 							}
@@ -389,12 +574,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "97c8a7e9-99fb-4e6b-b956-be1a184497c4",
+								"id": "7d5230c1-ff3b-4304-82c4-92d749ad6204",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get horizontal position');",
 									""
 								]
 							}
@@ -425,12 +619,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c12a8a70-4a12-44d1-8bdb-bdcb18ead392",
+								"id": "66f5e034-1bdb-46f6-8fc7-e9d67872098c",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get vertical position');",
 									""
 								]
 							}
@@ -461,12 +664,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c9955382-2570-48af-a06f-b44636d58455",
+								"id": "dd4ee112-313f-4faf-b3c3-96b225f9a570",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Get angle position');",
 									""
 								]
 							}
@@ -497,12 +709,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "05e818ba-1f06-4b57-9e30-b6fd63d18053",
+								"id": "2d466505-1309-4197-b0a7-6fa9c91eccd9",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Set vertical position');",
 									""
 								]
 							}
@@ -533,12 +754,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ae9fc0ba-7270-4582-8a5e-e961b4ec1bf2",
+								"id": "6f1ee5e1-cab9-4994-9765-881a2203379f",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Set angle position');",
 									""
 								]
 							}
@@ -569,12 +799,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4adfbf6f-9057-4516-9edc-67a438319106",
+								"id": "1d91524d-06c0-4f11-8a43-5457ecc5cb1e",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Move away');",
 									""
 								]
 							}
@@ -605,12 +844,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "dbf04eeb-4e6a-441b-8321-c602fd3c3aaf",
+								"id": "d86c87d1-e09f-4736-aa39-1833c0606c39",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Move back');",
 									""
 								]
 							}
@@ -718,12 +966,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d1370fd5-a44d-4968-b7f3-6b819b220173",
+								"id": "2ad68f31-684c-4d60-9eb9-ea6b75580cb5",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Chip temp');",
 									""
 								]
 							}
@@ -754,12 +1011,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ca6ce005-4d2a-4927-aecb-b4a00a550ff8",
+								"id": "f06ec752-9429-40a0-8b76-ecbf9c435be6",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Power off');",
 									""
 								]
 							}
@@ -826,12 +1092,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3975fecd-9fa3-401c-b7f1-447a1d0f48d8",
+								"id": "ca61af9e-e4e0-469e-abb0-43ac9ae467d9",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Close shutter');",
 									""
 								]
 							}
@@ -851,83 +1126,6 @@
 							],
 							"path": [
 								"hous_temp"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Experiment",
-			"item": [
-				{
-					"name": "Start",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "a9177955-ee99-460e-a7ab-936143cb36d7",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{experimentUrl}}/start",
-							"host": [
-								"{{experimentUrl}}"
-							],
-							"path": [
-								"start"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Stop",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "047261c9-cda8-4538-bca9-86e46a0d4b5b",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{experimentUrl}}/stop",
-							"host": [
-								"{{experimentUrl}}"
-							],
-							"path": [
-								"stop"
 							]
 						}
 					},
