@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "284522d2-422f-4ea3-a29c-801561791dac",
+		"_postman_id": "d5f6e7fd-0030-41ce-9958-979e99bcf346",
 		"name": "RBTM Experiment",
 		"description": "RBTM Experiment",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -1068,18 +1068,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f06ec752-9429-40a0-8b76-ecbf9c435be6",
+								"id": "185a449f-b80e-48df-ac61-8a2866fad5fe",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test('response is success', () => {",
-									"    ",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.success).to.be.true;",
-									"",
 									"});",
 									"",
 									"postman.setNextRequest('Power off');",
@@ -1093,7 +1086,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "1"
 						},
 						"url": {
 							"raw": "{{detectorUtl}}/get-frame-with-closed-shutter",
