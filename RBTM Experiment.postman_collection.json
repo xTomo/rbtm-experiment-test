@@ -1106,12 +1106,21 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b2a7d622-102c-4de2-b99b-e116ad9a19a6",
+								"id": "555883f1-772f-4c7e-85ec-e64be375dce8",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
 									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Hous temp');",
 									""
 								]
 							}
