@@ -7,153 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "Experiment",
-			"item": [
-				{
-					"name": "Start",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "5043d335-f443-430f-b0d9-b6b2a37e0949",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test('response is success', () => {",
-									"    ",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.success).to.be.true;",
-									"",
-									"});",
-									"",
-									"postman.setNextRequest('Power on');",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"test specimen\",\n\t\"tags\": \"postman checking\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": {{$timestamp}},\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
-						},
-						"url": {
-							"raw": "{{experimentUrl}}/start",
-							"host": [
-								"{{experimentUrl}}"
-							],
-							"path": [
-								"start"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Stop",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "8202979e-1314-458c-a4b8-5ffe38ac0e72",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test('response is success', () => {",
-									"    ",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.success).to.be.true;",
-									"",
-									"});",
-									"",
-									"postman.setNextRequest(null);",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{experimentUrl}}/stop",
-							"host": [
-								"{{experimentUrl}}"
-							],
-							"path": [
-								"stop"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "State",
-			"item": [
-				{
-					"name": "State",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "b3c2de2f-7d0b-474f-afd8-e4aef6c14dca",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test('response is ok', () => {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test('response is success', () => {",
-									"    ",
-									"    const jsonData = pm.response.json();",
-									"    pm.expect(jsonData.success).to.be.true;",
-									"",
-									"});",
-									"",
-									"postman.setNextRequest('Open shutter');",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{stateUrl}}",
-							"host": [
-								"{{stateUrl}}"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Source",
 			"item": [
 				{
@@ -207,7 +60,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "19baeedf-c019-4d4c-9313-8ba8f33de041",
+								"id": "2ef3d585-63d1-4da0-b93c-55f4f09c1b2b",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
@@ -221,7 +74,7 @@
 									"",
 									"});",
 									"",
-									"postman.setNextRequest('Stop');",
+									"postman.setNextRequest('Start');",
 									""
 								]
 							}
@@ -421,6 +274,53 @@
 							],
 							"path": [
 								"get-current"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "State",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b3c2de2f-7d0b-474f-afd8-e4aef6c14dca",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Open shutter');",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{stateUrl}}",
+							"host": [
+								"{{stateUrl}}"
 							]
 						}
 					},
@@ -1190,6 +1090,106 @@
 							],
 							"path": [
 								"hous_temp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Experiment",
+			"item": [
+				{
+					"name": "Start",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea27792a-96a4-4ac8-8155-35d6d147693e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest('Stop');",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"test specimen\",\n\t\"tags\": \"postman checking\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": {{$timestamp}},\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{experimentUrl}}/start",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stop",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "434146b4-f67a-474a-a507-09fa76ce271b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('response is ok', () => {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test('response is success', () => {",
+									"    ",
+									"    const jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.be.true;",
+									"",
+									"});",
+									"",
+									"postman.setNextRequest(null);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{experimentUrl}}/stop",
+							"host": [
+								"{{experimentUrl}}"
+							],
+							"path": [
+								"stop"
 							]
 						}
 					},
