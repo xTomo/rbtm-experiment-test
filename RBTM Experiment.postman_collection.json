@@ -1147,7 +1147,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"test specimen\",\n\t\"tags\": \"postman checking\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": \"{{date}}\",\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
+							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"postman test specimen\",\n\t\"tags\": \"postman test\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": \"{{date}}\",\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
 						},
 						"url": {
 							"raw": "{{experimentUrl}}/start",
