@@ -1107,7 +1107,6 @@
 							"listen": "test",
 							"script": {
 								"id": "ea27792a-96a4-4ac8-8155-35d6d147693e",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test('response is ok', () => {",
 									"    pm.response.to.have.status(200);",
@@ -1122,7 +1121,19 @@
 									"",
 									"postman.setNextRequest('Stop');",
 									""
-								]
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "25fad4a4-daab-468f-9cb6-0b629966af78",
+								"exec": [
+									"var moment = require('moment')",
+									"pm.globals.set(\"date\", moment().format(\"DD.MM.YYY HH:mm:ss\"))"
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -1136,7 +1147,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"test specimen\",\n\t\"tags\": \"postman checking\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": {{$timestamp}},\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
+							"raw": "{\n\t\"exp_id\": \"{{$guid}}\",\n\t\"specimen\": \"test specimen\",\n\t\"tags\": \"postman checking\",\n\t\"timestamp\": {{$timestamp}},\n\t\"datetime\": \"{{date}}\",\n\t\"experiment parameters\":\n\t{\n\t\t\"advanced\": false,\n\t\t\"DARK\":\n\t\t{\n\t\t\t\"count\": 1,\n\t\t\t\"exposure\": 1.0\n\t\t},\n\t\t\"EMPTY\":\n\t\t{\n\t\t\t\"count\": 2,\n\t\t\t\"exposure\": 2.0\n\t\t},\n\t\t\"DATA\":\n\t\t{\n\t\t\t\"step count\": 3,\n\t\t\t\"exposure\": 3.0,\n\t\t\t\"angle step\": 3.0,\n\t\t\t\"count per step\": 3\n\t\t}\n\t}\n}"
 						},
 						"url": {
 							"raw": "{{experimentUrl}}/start",
