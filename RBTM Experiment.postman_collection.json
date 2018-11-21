@@ -1131,7 +1131,7 @@
 								"id": "25fad4a4-daab-468f-9cb6-0b629966af78",
 								"exec": [
 									"var moment = require('moment')",
-									"pm.globals.set(\"date\", moment().format(\"DD.MM.YYY HH:mm:ss\"))"
+									"pm.globals.set(\"date\", moment().format(\"DD.MM.YYYY HH:mm:ss\"))"
 								],
 								"type": "text/javascript"
 							}
